@@ -37,7 +37,6 @@ function createColorControl() {
   colorDirection = 1
 }
 
-}
 function draw() {
   background(bg)
   fill(color(r,g,b))
