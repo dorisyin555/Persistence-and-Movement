@@ -22,8 +22,9 @@ function setup() {
   // ----------------------
   createBall()
   createRandomColor()
-  
-  function createBall() {
+}
+
+function createBall() {
   setRandomPosition()
   setRandomVelocity()
   radius = random(10,20)
@@ -31,27 +32,24 @@ function setup() {
   noStroke()
 }
   
-  function createColorControl() {
+function createColorControl() {
   colorChangeRate = 2
   colorDirection = 1
 }
 
-}
 function draw() {
   background(bg)
   fill(color(r,g,b))
   circle(x,y,radius)
   x += dx // x = x + dx
-  y += dy // y = y + dy
-
-  }   
+  y += dy // y = y + dy   
 
   if (x < 0 || x > width) {
     dx *= -1;
   }
   if (y < 0 || y > height) {
     dy *= -1;
-  
+  }
   
   // Task 3 
   // If you're paying attention, you'll note that the ball isn't bouncing
@@ -82,11 +80,11 @@ function draw() {
   //   alternately increasing the value to 255 then decreasing it down to 0
   //   and then bouncing it back. This will require a number of changes
   
-}
+
   if ( r > 255 || r < 0) {
     colorDirection *= -1
   }
-
+}
 // Task 5
 // default parameter values. 
 // You can see when we call this function in setup, we don't pass any values in.
